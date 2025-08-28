@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/mohit/OneDrive/Desktop/cpp project",
-      "program": "c:/Users/mohit/OneDrive/Desktop/cpp project/build/Debug/outDebug",
+      "cwd": "c:/Users/mohit/OneDrive/Desktop/cpp project/.vscode",
+      "program": "c:/Users/mohit/OneDrive/Desktop/cpp project/.vscode/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
