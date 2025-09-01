@@ -16,20 +16,27 @@ class car{
 };
 
 class sportscar : public car{
-    public:
+    private:
     string brand;
     string model;
     bool isengineon;
     int currentspeed;
     int currentgear;
-
+    string tyrecompany;
+    
+    public:
     sportscar(string b , string m){
         this->brand = b;
         this->model = m;
         isengineon = false;
         currentspeed = 0;
         currentgear = 0;
+        tyrecompany ="MRF";
 
+    }
+
+    int getspeed(){
+        return currentspeed;
     }
 
     void startengine(){
