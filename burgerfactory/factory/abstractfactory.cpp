@@ -27,24 +27,38 @@ class premiumburger : public burger{
     }
 };
 
-class burgerfactory{
+class garlicbread{
     public:
-    burger* createburger(string& type){
-        if(type == "basic"){
-            return new basicburger();
-        }
-        else if(type == "standard"){
-            return new standardburger();
-        }
-        else if(type == "premium"){
-            return new premiumburger();
-        }
-        else{
-            cout<<"invalid burger type!" <<endl;
-            return nullptr;
-        }
+    virtual void prepare() = 0;
+
+};
+class basicgarlicbread : public garlicbread{
+    public:
+    void prepare() override{
+        cout<<"preparing basic garlic bread with butter and garlic \n";
     }
 };
+class chessgralicbread : public garlicbread{
+    public:
+    void prepare() override{
+        cout<<"preparing chess garlic bread with extra cheese and butter \n";
+    }
+};
+class chesswheatgarlicbread : public garlicbread {
+    public:
+    void prepare() override{
+        cout<<"preparing cheese wheat garlic bread with extra cheese and butter!\n";
+    }
+
+};
+class mealfactory{
+    public:
+    virtual burger* createburger(string& type) = 0;
+    virtual garlicbread* creategarlicbread(string& type) = 0;
+ };
+class singhburger : public mealfactory{
+    
+}
 int main(){
     string type = "standard";
     burgerfactory* myburgerfactory = new burgerfactory();
